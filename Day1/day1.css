@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.parent{
+    background-color: rgb(233, 66, 94);
+    padding: 50px;
+    width: 70%;
+    margin: auto;
+}
+.child{
+    background-color: pink;
+    padding: 100px;
+    width: 50%;
+    margin: auto;
+}
+/* conclusion: 
+1- avoid using height , 
+2- avoid giving fixed width eg: in px's
+3- start using rem's for consistency 
+4- it's us who makes the css unresponsive but css tries it's best to perform responsive for ourselves*/

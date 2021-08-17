@@ -1,0 +1,184 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+header {
+    background-color: #136C72;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%;The easy way to gett space in between and having 3 button on each side and other two on other is side is giving 100% width to nav 
+    and apply justify content space between to it, width 100%  is giiving the nav all the available space left after logo bcz by default
+    flex container tries to get as minimum space as it could*/
+    flex-grow: 1; /*but flex box gives us property for this which is flex-grow by default it's value is set to 0 meaning it can't grow
+    it'll be as minimum as it could or as long as the specified width but it will never grow more than that, flex-grow 1 means that it can
+    take all the available space even if we specifiy hard code width and then apply flex-grow 1 then still it'll take all the available width*/
+    flex-shrink: 1;/*this is another felxbox property by which we can speicfy that if we want out item to shrink or not by default it's value is 1 
+    which means it can shrink and 0 means it can not*/
+    /* width: 700px; */
+}
+.container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0.5em 5em;
+    margin: 0 auto;
+}
+.nav__logo{
+    padding: 0.5em 1em 0.5em 0;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+.nav__list--primary{
+    /* to simply center the first three navbar in center we would simply apply margin left right auto to them so they will come in center */
+    margin: 0 auto;
+}
+.nav__link {
+    color: white;
+    text-transform: uppercase;
+    padding: 0.35em 1em;
+}
+
+.nav__link:hover {
+    background-color: white;
+    color: #136C72;
+    border-radius: 2em;
+}
+
+img {
+    max-width: 100%;
+    /*By applying max-width 100% on all the images our our page , all th eimages will become reposnive they will 
+    never go big thna their size but they will shrink accordingly*/
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /*space between is a very handful property and if oftenly used if puts the available in between of our components
+    also but we make sure that the elements width is not set to 100% otherwise there will be no spacing in between*/
+}
+
+.section1 {
+    background-color: rgb(33, 62, 75);
+}
+
+.parent-of-hero, .sec2-body {
+    width: 100%;
+    max-width: 1100px;
+    padding: 7em 5em;
+    margin: 0 auto;
+}
+
+.content, .sec2-div1 {
+    width: 60%;
+}
+
+.content > h1 {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+.content > p {
+    color: white;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3em;
+}
+
+.content > button {
+    background-color: rgb(46, 192, 221);
+    border: none;
+    outline: none;
+    color: rgb(33, 62, 75);
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 0.75em 2em;
+    border-radius: 2.5em;
+    cursor: pointer;
+}
+
+.content > button:hover {
+   opacity: 0.75;
+}
+
+.hero__image {
+    width: 30%;
+}
+
+.sec2-body {
+    padding: 3em 5em;
+}
+
+.sec2-div1 {
+    width: 60%;
+    padding: 3rem 0;
+}
+
+.sec2-div1-head {
+    color: #136C72;
+    font-size: 2.3rem;
+}
+
+.sec2-div1-para {
+    font-size: 1.1rem;
+    color: #3A3A3A;
+    line-height: 1.5em;
+}
+
+.left-child+.left-child {
+    margin-top: 1em;
+}
+
+.sec2-div2 {
+    color: white;
+    background-color: #136C72;
+    text-align: center;
+    width: 30%;
+    padding: 3rem 2rem;
+}
+
+.sec2-div2-para {
+    margin-top: 1.5em;
+    line-height: 1.5em;
+    font-size: 1rem;
+    font-weight: regular;
+}
+
+.div2-child+.div2-child {
+    margin-top: 3em;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    .nav__item {
+        margin: auto;
+    }
+    .content {
+        width: 100%;
+    }
+    .parent-of-hero {
+        padding: 4rem 1.5rem;
+    }
+}

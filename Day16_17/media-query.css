@@ -1,0 +1,25 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    background-color: teal;
+}
+/* min width is usually ysed when we are doing mobile first and then desktop and max-width is usually used when desktop is made first and then mobile*/
+/* media queries has to be written in order otherwise it is not gonna work as our expectations */
+/* for ex: in min width we can't define first 800px query then 600px query in that case the 800px query is never gonna dispaly */
+/* in min-width we should write smaller number to bigger number */
+/* in max-width we should write bigger number to smaller number bcz it's the good practice */
+/* ///////////////////////////////////////////////////////////////////// */
+/* 600 pixels or bigger */
+@media (min-width: 600px){
+    .container{
+        background-color: tomato;
+    }
+}
+
+/* 600px or smaller */
+@media (max-width: 600px){
+    .container{
+        background-color: rgb(114, 255, 71);
+    }
+}

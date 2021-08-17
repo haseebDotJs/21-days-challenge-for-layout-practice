@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+.parent-of-content{
+    background-color: rgb(33,62,75);
+    padding: 7rem 5rem;
+}
+.content{
+    width: 50%;
+    max-width: 750px;
+}
+.content > h1{
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+.content > p{
+    color: white;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3em;
+}
+.content > button{
+    background-color: rgb(46,192,221);
+    border: none;
+    outline: none;
+    color: rgb(33,62,75);
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 0.75em 2em;
+    border-radius: 2.5em;
+}
+/* by default the width of any div is 100% but when it's parent get's the display of flex it tries to get as minimun width as it can get
+   so the other components can also fit in the same line */
+
+/* the parent component on which display flex is applied is called flex container and it's child are called flex-items */
+.boxes{
+    width: 100%;
+    max-width: 750px;
+    padding: 2rem 5rem;
+    display: flex;
+}
+
+.box{
+    margin: 10px;
+    width: 100%;
+}
+
+/* if we apply 100% width on the chid div's then they all are gonna get equal size of width even if the 1 box has no content and other two have content
+ still they all are gonna set to equal width */
+ /* if we don't do width 100% then box 1 will be ignored as if it does'nt exist becuase it holds no content */
+@media screen and (max-width: 600px){
+    html{
+        font-size: 14px;
+    }
+    .content{
+        width: 100%;
+    }
+    .parent{
+        padding: 5rem 3rem;
+    }
+}

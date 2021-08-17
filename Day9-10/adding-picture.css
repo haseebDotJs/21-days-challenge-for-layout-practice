@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+img{
+    max-width: 100%; /*By applying max-width 100% on all the images our our page , all th eimages will become reposnive they will 
+    never go big thna their size but they will shrink accordingly*/
+}
+.row {
+    display: flex;
+    justify-content: space-between; /*space between is a very handful property and if oftenly used if puts the available in between of our components
+    also but we make sure that the elements width is not set to 100% otherwise there will be no spacing in between*/
+}
+
+.parent-of-hero {
+    background-color: rgb(33, 62, 75);
+    padding: 7rem 5rem;
+    margin: auto;
+}
+
+.content {
+    width: 60%;
+}
+
+.content>h1 {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+.content>p {
+    color: white;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3em;
+}
+
+.content>button {
+    background-color: rgb(46, 192, 221);
+    border: none;
+    outline: none;
+    color: rgb(33, 62, 75);
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 0.75em 2em;
+    border-radius: 2.5em;
+}
+
+.hero__image {
+    width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    .content {
+        width: 100%;
+    }
+    .parent-of-hero {
+        padding: 5rem 3rem;
+    }
+}

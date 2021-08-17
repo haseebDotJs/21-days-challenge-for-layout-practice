@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+.parent-of-content{
+    background-color: rgb(33,62,75);
+    padding: 6em 3em;
+}
+.content{
+    width: 80%;
+    margin: auto;
+    max-width: 900px;
+}
+.content > h1{
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+.content > p{
+    color: white;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3em;
+}
+.content > button{
+    background-color: rgb(46,192,221);
+    border: none;
+    outline: none;
+    color: rgb(33,62,75);
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 0.75em 2em;
+    border-radius: 2.5em;
+}
+/* by default the width of any div is 100% but when it's parent get's the display of flex it tries to get as minimun width as it can get
+   so the other components can also fit in the same line */
+
+/* the parent component on which display flex is applied is called flex container and it's child are called flex-items */
+.parent-of-boxes{
+    width: 100%;
+    padding: 6em 3em;
+}
+.boxes,.section3{
+    width: 80%;
+    margin: auto;
+    max-width: 900px;
+    display: flex;
+    text-align: center;
+}
+
+.box{
+    /* margin: 10px; */
+    /* width: 100%; */
+}
+/* what thi + is doing that it catches those elemnts who has a previous child as box 1 has no previous child
+   but box 2 and box 3 have a child behind them so it is selecting box 2 and 3 */
+/* as it will always only select every child except 1st so here we have got a trick to add any amount of space between these childs */
+.box + .box,.sec3__box + .sec3__box{
+    margin-left: 1.5em;
+}
+/* if we apply 100% width on the chid div's then they all are gonna get equal size of width even if the 1 box has no content and other two have content
+ still they all are gonna set to equal width */
+ /* if we don't do width 100% then box 1 will be ignored as if it does'nt exist becuase it holds no content */
+.box__heading{
+    color: #87629A;
+}
+.box__para,.sec3__para{
+    margin-top: 1em;
+}
+.parent-of-section3{
+    background-color: #136C72;
+    padding: 6em 3em;
+}
+.sec3__heading,.sec3__para{
+    color: white;
+}
+@media screen and (max-width: 900px){
+    .parent-of-boxes,.parent-of-section3{
+        padding: 5em 3em;
+    }
+    .boxes,.section3{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .box + .box,.sec3__box + .sec3__box{
+        margin-top: 2em;
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    html{
+        font-size: 14px;
+    }
+    .content{
+        width: 100%;
+    }
+    .parent-of-content{
+        padding: 5em 3em;
+    }
+}

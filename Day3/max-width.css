@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.parent{
+    width: 80%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: grey;
+}
+
+.parent > p{
+    width: 50%;
+    color: white;
+    font-size: 1.2rem;
+}
+/* max-width helps us in limiting the width of an element even
+if the screen is s much big the content will never exceed it's 
+max-width and that helps us in keeping our content easy to read and understand on big screens */
+

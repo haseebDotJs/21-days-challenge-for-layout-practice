@@ -1,0 +1,9 @@
+Day16:
+learned about which break points to use, kevin told that it depends on our situation that when our site it getting out of
+shape and that time we should use a break point but we should not a use different differnet break points for different
+sections , instead we should try to use as less breakpoints as we can maybe 2-3
+
+Day 17:
+Kevin told us about the meta tag in html in starting actually this meta viewport is what that enables us to use media queries in our site
+otherwise media queries will not work in our site , also he tolds us about it that if o=ever e=our site is not applying 
+media queries so we can check that if media viewport tag line is not remmoved

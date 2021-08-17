@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class naming Convention</title>
+  <link href="challenge3.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- this is the classe's naming convention that we can use to get rid of nesting and to also understand our css code better-->
+  <div class="cards--parent">
+
+    <div class="card card--light"><!-- we can write one common class name for 2 same kind of divs and 2nd class as 
+    modifier which can modify any of them according to needs, we can use (--) for modifier class name-->
+
+      <img src="" alt="" class="card__image"><!--Also the (--) defines that it is a modifier class name and is written with parent div
+       and to differtiate parent with child elemnts by class name , we can define child class names with (__) so we can 
+       clearly identify that which elemnt is child and which is parent-->
+      <h1 class="card__title"></h1>
+      <p class="card__body"></p>
+    </div>
+
+    <div class="card card--light">
+      <img src="" alt="" class="card__image">
+      <h1 class="card__title"></h1>
+      <p class="card__body"></p>
+    </div>
+
+  </div>
+</body>
+</html>

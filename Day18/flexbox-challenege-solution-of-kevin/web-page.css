@@ -1,0 +1,105 @@
+/*not putting margin and padding 0 universally becuase by this all of our text get's next to each other without any spcace and we have set their space i
+individually so setting margin 0 on body so that all our section can have full width and the text can have some space */
+* {
+    box-sizing: border-box;
+}
+
+/* 
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Playfair Display', serif;
+
+*/
+
+/* doing mobile first and then will add media query for desktop */
+html{
+    font-size: 14px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3125rem;
+    color: #222C2A;
+    line-height: 1.6;
+    margin: 0;
+}
+section,main{
+    padding: 4em 0;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1128px;
+}
+.section--title{
+    font-size: 2.25rem;
+    color:  #F3EED9;
+}
+.section--title--dark{
+    color: #824936;
+}
+img {
+    max-width: 100%;
+    /*To make all the images responsive, we don't give width 100% but give max-width 100% it's becuase the image will shrink
+    in both the cases if the screen size goes down but if size goes up then in width 100% the image will take whole the width where with max-width: 
+    it will not do it*/
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    line-height: 1.1;/*always give less space in line-heights in big font-sizes*/
+    margin-top: 0;
+}
+.section--one{
+  background: #F3EED9 ;
+  color: #824936;
+  min-height: 100vh; 
+  /*what min-height actually do is that it tells section one that i want your height to be 100vh or bigger
+  but not smaller and that makes it flexible whereas height would section one that i want you to be fixed
+  100vh and then if we increase our section content then it would overflow*/
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.main--text{
+    text-transform: uppercase;
+    color: #222C2A;
+    letter-spacing: 10px;
+    font-size: 1.125rem;
+    margin: 0 0 .25em 0;
+
+}
+.main--title{
+    font-size: 3.5rem;
+}
+.section--three{
+    background-color: #222C2A;
+    color: #ffffff;
+}
+.section--four{
+    background-color: #824936;
+    color: #ffffff;
+}
+
+@media (min-width: 800px){
+    html{
+        font-size: 16px;
+    }
+    .row{
+        display: flex;
+    }
+    .col{
+        width: 100%;
+    }
+    .col + .col{
+        margin-left: 3em;
+    }
+    .main{
+        width: 100%;
+        max-width: 660px;
+        margin: 0 auto;
+    }
+    .section--one{
+        min-height: 560px;
+    }
+}

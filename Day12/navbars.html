@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link href="navbars.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- 1st way -->
+  <header>
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        <li class="nav__item nav__item__right"><a href="#" class="nav__link">Sign in</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Sign up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 2nd way -->
+  <!-- <header>
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+      </ul>
+
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Sign in</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Sign up</a></li>
+      </ul>
+    </nav>
+  </header> -->
+  <div class="parent">
+    <section class="section1">
+      <div class="parent-of-hero row">
+
+        <div class="content">
+          <h1>Responsive layouts don't have to be a struggle</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam.</p>
+          <button>I WANT TO LEARN</button>
+        </div>
+
+        <div class="hero__image">
+          <img src="./img/hero-img.jpg" alt="wireframing illustrtion">
+        </div>
+      </div>
+      <!--here we have put the img and parent div of this img has applied display
+      flex on it so the height of this image will be stretched and it's height will be same as height of his previous sibling div
+      there are 3 ways we can save his from strecthing 1 is putting it in a div 2 is assign align-self to it 3- assiging align items on parent div 
+      and  changing it's property , i found the first way more convenient -->
+    </section>
+
+    <section class="section2">
+      <div class="sec2-body row">
+        <div class="sec2-div1">
+          <h2 class="sec2-div1-head left-child">Quality designs made custom, on demand, just for you</h2>
+          <p class="sec2-div1-para left-child">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor
+            incididunt
+            ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <p class="sec2-left-para left-child">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor
+            incididunt
+            ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+
+        <div class="sec2-div2">
+          <div class="div2-child">
+            <h2 class="sec2-div2-head">Cheap</h2>
+            <p class="sec2-div2-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+          <div class="div2-child">
+            <h2 class="sec2-div2-head">Quick</h2>
+            <p class="sec2-div2-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+          <div class="div2-child">
+            <h2 class="sec2-div2-head">Quality</h2>
+            <p class="sec2-div2-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+  </div>
+</body>
+
+</html>

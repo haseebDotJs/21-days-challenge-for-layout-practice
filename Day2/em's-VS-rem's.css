@@ -1,0 +1,88 @@
+/* margin and paddings in em's looks for their sibling font-size's size but in rem's it look for root font-szie which is html and apply that amount of space according */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* html{
+    font-size: 32px;
+} */
+.parent{
+    display: flex;
+    padding: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+}
+/* em always looks for ,what parent's font-size is and apply that font size to it */
+.em{
+    width: 50%;
+    margin-right: 1em;
+    background-color: pink;
+    padding: 1em;
+    font-size: 2em
+}
+.em > h1{
+    margin-bottom: 1em; /*margin-bottom will also be 50px*/
+    font-size: 50px;
+}
+/* rem always looks for ,what root's font-size is/what's html tag font-size is (which is root of whole page) and apply that font size to it */
+/* rem is always consistent it never get chnages if parent's font size change bcz it depens on root */
+
+.rem{
+    width: 50%;
+    margin-left: 1rem;
+    background-color: rgb(195, 251, 255);
+    padding: 1rem;
+    font-size: 5em;
+}
+.rem h1,.rem p{
+    font-size: 1rem;
+}
+.btns{
+    display: flex;
+    padding: 2em 1em;
+    margin-top: 1em;
+    text-align: center;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    background-color: orange;
+}
+.btn{
+    /* font-size: 1rem; */
+    /* width: 33.3%; */
+    /* margin: 1em; */
+    background-color: salmon;
+    padding: 1em;
+    border-radius: 0.5em;
+    outline: none;
+    border: 1px solid black;
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+.btn1{
+   font-size: 1rem;
+}
+.btn2{
+    font-size: 2rem;
+
+}
+.btn3{
+    font-size: 3rem;
+}
+
+/* .btns > p{
+    font-size: 1rem;
+} */
+.checking{
+    /* font-size: 48px; */
+}
+/* the big advantage of rem is that by changing just font-size of root /html tag at some media query breakpoint,
+our whole website's paddin's margin's and font-sizes's will get's adjusted automatically and we'll get saved 
+from writing bucnh of pixels sizing for each section of our website */
+@media screen and (max-width: 700px){
+    html{
+        font-size: 12px;
+    }
+}
+/* at the end according to me rem's are awesome */

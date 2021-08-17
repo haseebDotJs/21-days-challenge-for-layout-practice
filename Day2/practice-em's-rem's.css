@@ -1,0 +1,77 @@
+/* settin rem's on font sizes and em's on margins paddings and other stuff is what we shoudl do */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent{
+    padding: 1.5em;
+    font-size: 1.5rem;
+    width: 50%;
+    margin: auto;
+}
+.top{
+    margin-bottom: 2em;
+}
+.top > h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 800;
+    color: orange;
+}
+.bottom{
+    background-color: rgb(255, 109, 56);
+    padding: 3em 2em;
+}
+.bottom > h1{
+    font-size: 3.5rem;
+    margin-bottom: 0.5em;
+    color: white;
+}
+.bottom > p{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+.bottom > input{
+    outline: none;
+    border: none;
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 0.5em 1.5em;
+    transition: background 500ms;
+}
+.bottom > input:hover{
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+@media screen and (max-width: 900px){
+
+    .parent{
+        font-size: 1rem;
+    }
+    html{
+        font-size: 14px;
+    }
+    .bottom > h1,.top > h1{
+        font-size: 3rem;
+    }
+    .bottom > input{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 450px){
+    html{
+        font-size: 12px;
+    }
+    .parent{
+        font-size: 0.7rem;
+    }
+
+}
+/* at the end according to me rem's are awesome */

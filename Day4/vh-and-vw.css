@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/* viewport height and width are referred as vh and vw */
+.parentOfPerc{
+    width: 900px;  /*As it was a percent div and it's child is assigned width of 100% that's why it's 100% is it's parent's width , which is 900px*/
+    margin: auto;
+}
+.parentOfViewPort{
+    width: 900px;/*fixed width of 900px is assigned to viewport div parent but still due to 100vw it tooks 100% of the width of device*/
+}
+/* percent take it's width according to it's parent width for ex: here 900px is 100% for percent div becuase it's parent 
+has assigned a width of 900px */
+.percent{
+    background-color: aqua;
+    padding: 40px 0px;
+    width: 100%;
+}
+/* Whereas for viewport the width of screen is 100 not the width of it's parent that why 100vw is always covering 
+  whole size of screen whether it's a laptop or mobile screen*/
+  /* default value of any div container is always 100% */
+.viewport{
+    background-color: orange;
+    padding: 40px 0px;
+    width: 100vw;
+    height: 50vh;/* same goes for vh it's height is considered full height of device and 50 vh will cover half screen vertically*/
+}
+p{
+    color: rgb(0, 0, 0);
+}
